@@ -13,8 +13,8 @@ resource "aws_instance" "ubuntu" {
   instance_type               = "t3.micro"
   ami                         = var.aws_ami
   key_name                    = aws_key_pair.ec2.key_name
-  subnet_id                   = aws_subnet.mainvpc_public_subnet.id
-  vpc_security_group_ids      = [aws_security_group.allow_ssh.id]
+  subnet_id                   = aws_subnet.main_public.id
+  vpc_security_group_ids      = [aws_security_group.allow_ssh_http.id]
   associate_public_ip_address = true
 
   provisioner "file" {
