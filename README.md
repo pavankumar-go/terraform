@@ -11,3 +11,6 @@
 
 ### References 
 1. [Terraform Best Practices for AWS users by ozbillwang](https://github.com/ozbillwang/terraform-best-practices)
+
+### Roadmap
+1. Use datasources for getting AMIs instead of hardcoding(ec2/vars.tf/line_21)
