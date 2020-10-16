@@ -1,6 +1,0 @@
-ec2/ssh-keys/*.pem
-ec2/ssh-keys/*.pub
-ec2/.terraform*
-ec2/ec2_plan
-ec2/terraform.tfstate
-ec2/terraform.tfstate.backup
