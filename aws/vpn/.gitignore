@@ -1,0 +1,7 @@
+newkey  
+newkey.pub
+ssh-keys/*
+terraform.tfstate
+terraform.tfstate.backup
+.terraform/*
+

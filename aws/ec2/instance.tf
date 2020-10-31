@@ -10,6 +10,7 @@ resource "aws_instance" "ubuntu" {
   ami                         = var.aws_ami
   key_name                    = aws_key_pair.ec2.key_name
   subnet_id                   = aws_subnet.main_public.id
+  # private_ip = specify private to use or it will be auto assigned from the subnet
   vpc_security_group_ids      = [aws_security_group.allow_ssh_http.id]
   associate_public_ip_address = true
   availability_zone           = var.availability_zone
@@ -45,3 +46,12 @@ resource "aws_instance" "ubuntu" {
     Name = local.name_prefix
   }
 }
+
+/*
+assign static public IP to ec2 instance
+# static IP aws elastic IP
+resource "aws_eip" "instance_public_ip" {
+  instance = aws_instance.ubuntu.id
+  vpc = true
+}
+*/
