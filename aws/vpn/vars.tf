@@ -16,7 +16,7 @@ variable "instance_type" {
   default = "t3.micro"
 }
 variable "ubuntu_machine_id" {
-
+# ubuntu 20.04 LTS
   default = "ami-0a3a4169ad7cb0d77"
 }
 
